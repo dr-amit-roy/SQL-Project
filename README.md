@@ -16,15 +16,15 @@ Tables:
 
 To answer the following questions using SQL Analysis: 
 
-1. How many online visitors saw our products? How many orders did we get online?
+Question 1: What percentage of our products are the online visitors interested in? What do online customers buy?
 
-2. What revenue have we generated through online sales?
+Question 2: Which products have we been selling online? How many of them?
 
-3. Which country are our leading online purchasers from?
+Question 3: Should I reorder more stock for our online top-seller products?
 
-4. What products have generated us most of our online revenue?
+Question 4: Which country are our leading online purchasers from?
 
-5. Do we have enough stock of our online best-selling products? 
+Question 5: What online product categories feature our highest  selling offline products?
 
 ## Process
 
