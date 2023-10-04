@@ -116,6 +116,7 @@ Answer:
 
 
 SQL Queries:
+-- commented section added for query refinement 
 
 select distinct country, city, v2productcategory
 from all_sessions
@@ -123,8 +124,8 @@ where country not like '%(not set)'
 and productquantity is not null
 and city not like '%not%' 
 and v2productcategory not like '%(not%' 
- and v2productcategory like '%Nest%' 
-and country = 'United States'
+-- and v2productcategory like '%Nest%' 
+-- and country = 'United States'
 order by 1, 2
 
 
