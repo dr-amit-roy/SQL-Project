@@ -136,26 +136,42 @@ Of the 24 US cities, people in 10 cities seem to have some liking for 'Nest' pro
 
 **Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
 
+Nest and Google Products are liked by the customers in USA.
 
 SQL Queries:
 
 
 
 Answer:
-
 
 
 
 
 **Question 5: Can we summarize the impact of revenue generated from each city/country?**
 
+
 SQL Queries:
 
-
+select distinct country, sum(revenue) over (partition by country), city, sum(revenue) over (partition by city)
+ from all_sessions a
+inner join analytics an
+on a.visitid = an.visitid
+where revenue is not null
+order by 2, 4
 
 Answer:
 
-
+"Switzerland"	16990000	"Zurich"	16990000
+"Israel"	32990000	"Tel Aviv-Yafo"	32990000
+"United States"	4804329988	"Palo Alto"	151000000
+"United States"	4804329988	"San Jose"	153000000
+"United States"	4804329988	"Chicago"	306000000
+"United States"	4804329988	"San Francisco"	312679998
+"United States"	4804329988	"Seattle"	358000000
+"United States"	4804329988	"Mountain View"	509730000
+"United States"	4804329988	"Sunnyvale"	672229992
+"United States"	4804329988	"New York"	1142730000
+"United States"	4804329988	"not available in demo dataset"	1198959998
 
 
 
